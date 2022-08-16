@@ -8,6 +8,10 @@ document.getElementById("withdrawSubmit").addEventListener("click", () => {
     return;
   }
   const value = parseFloat(withdrawField.value);
+  if (parseFloat(document.getElementById("balance").innerText) <= value) {
+    alert("taka nai");
+    return;
+  }
   document.getElementById("withdrawal").innerText =
     parseFloat(document.getElementById("withdrawal").innerText) + value;
   const value2 = parseFloat(withdrawField.value);
