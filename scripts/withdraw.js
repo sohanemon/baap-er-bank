@@ -3,13 +3,13 @@ const withdrawField = document.getElementById("withdrawField");
 console.log(withdrawField);
 /* adding event listener */
 document.getElementById("withdrawSubmit").addEventListener("click", () => {
-  if (isNaN(withdrawField.value)) {
+  if (isNaN(withdrawField.value) || withdrawField.value.length === 0) {
     alert("নাম্বার দে ");
     return;
   }
   const value = parseFloat(withdrawField.value);
   if (parseFloat(document.getElementById("balance").innerText) <= value) {
-    alert("taka nai");
+    document.getElementById("rejectInDashboard").style.display = "block";
     return;
   }
   document.getElementById("withdrawal").innerText =
