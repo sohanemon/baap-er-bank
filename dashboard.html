@@ -7,7 +7,58 @@
     <title>বাপের ব্যাংকে স্বাগতম 💗</title>
     <link rel="stylesheet" href="./css/output.css" />
   </head>
-  <body>
-    <h1 class="text-2xl">টাকা 💵 যা নিবি তার 2x জমা করবি।</h1>
+  <body
+    class="bg-gradient-to-tr from-orange-300 to-green-300 h-screen overflow-hidden"
+  >
+    <h1 class="text-3xl font-bold text-orange-400 text-center my-10">
+      প্রয়োজনের বেশি টাকা 💵 নিবি না।
+    </h1>
+    <section class="mx-auto text-2xl space-y-16 w-3/4 text-white font-medium">
+      <div class="grid grid-cols-3 gap-10">
+        <div
+          class="bg-gradient-to-tr shadow-lg from-green-400 to-green-700 rounded-lg p-10 w-full mx-auto"
+        >
+          <h1>Deposited</h1>
+          <p class="font-semibold">$<span id="deposited">00</span></p>
+        </div>
+        <div
+          class="bg-gradient-to-tr shadow-lg from-yellow-400 to-yellow-700 rounded-lg p-10 w-full mx-auto"
+        >
+          <h1>Withdrawal</h1>
+          <p class="font-semibold">$<span id="withdrawal">00</span></p>
+        </div>
+        <div
+          class="bg-gradient-to-tr shadow-lg from-pink-400 to-pink-700 rounded-lg p-10 w-full mx-auto"
+        >
+          <h1>Balance</h1>
+          <p class="font-semibold">$<span id="balance">10000</span></p>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-10">
+        <div
+          class="mx-auto p-10 rounded-lg shadow-lg w-full bg-gradient-to-l from-cyan-700 to-cyan-900 space-y-2"
+        >
+          <h1>Deposit</h1>
+          <input id="depositField" class="block input" type="text" /><button
+            id="depositSubmit"
+            class="btn bg-green-400"
+          >
+            Submit
+          </button>
+        </div>
+        <div
+          class="mx-auto p-10 rounded-lg shadow-lg w-full bg-gradient-to-l from-rose-700 to-rose-600 space-y-2"
+        >
+          <h1>Withdraw</h1>
+          <input id="WithdrawField" class="block input" type="text" /><button
+            id="withdrawSubmit"
+            class="btn bg-yellow-300"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+    </section>
+    <script src="./scripts/deposit.js"></script>
   </body>
 </html>
